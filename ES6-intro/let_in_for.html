@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<div id="container"></div>
+
+<script type="text/babel">
+
+    var div,
+        container = document.getElementById('container')
+
+    // при использовании let внутри цыкла
+    // на каждой итерации i будет разной
+    for (let i=0; i < 5; i++){
+        div = document.createElement('div')
+        div.onclick = function () {
+            console.log('This box is #' + i)
+        }
+        container.appendChild(div)
+    }
+
+
+</script>
