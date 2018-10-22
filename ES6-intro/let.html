@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script type="text/babel">
+
+    // можно не ставить в конце строк ;
+
+    var topic = "JavaScript"
+    if (topic){
+        // var внутри {} переопределяет topic
+        var topic = "React"
+        console.log("block", topic)
+    }
+    console.log("global",topic)
+
+    if (topic){
+        let topic = "only in brackets" // let делает так что переменная меняет значение только внутри {}
+        console.log('block',topic)
+    }
+    console.log("global",topic)
+
+</script>
